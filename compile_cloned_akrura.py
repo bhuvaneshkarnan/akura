@@ -184,7 +184,7 @@ core_head = """
         font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
         font-size: 15.5px !important;
         font-weight: 500 !important;
-        color: #263633 !important;
+        color: #1E293B !important;
         padding: 6px 4px !important;
         text-decoration: none !important;
         letter-spacing: 0.2px !important;
@@ -195,12 +195,12 @@ core_head = """
       }
 
       .nav-menu-4 .nav__link-item:hover {
-        color: #00856F !important;
+        color: #0066CC !important;
       }
 
       .nav-menu-4 .nav__link-item.w--current {
-        color: #00856F !important;
-        border-bottom: 2px solid #00856F !important;
+        color: #0066CC !important;
+        border-bottom: 2px solid #0066CC !important;
       }
 
       .mobile-menu-cta-wrap {
@@ -226,7 +226,7 @@ core_head = """
       font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
       font-size: 14.5px !important;
       font-weight: 600 !important;
-      background-color: #00856F !important;
+      background-color: #0066CC !important;
       color: #ffffff !important;
       height: 42px !important;
       line-height: 42px !important;
@@ -244,7 +244,7 @@ core_head = """
     }
 
     .header__btn-block .cta__green.mr-0:hover {
-      background-color: #006e5c !important;
+      background-color: #0052A3 !important;
       transform: translateY(-1px) !important;
     }
 
@@ -252,7 +252,7 @@ core_head = """
     footer#contact,
     .n4-footer_wrap,
     .n4-footer_inner {
-      background-color: #013126 !important;
+      background-color: #0B1E36 !important;
       font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
     }
 
@@ -272,7 +272,7 @@ core_head = """
 
     .footer-col-title,
     .n4-footer_content_list .n4-footer_link_text.n4-u-color-primary-green950 {
-      color: #58EDA2 !important;
+      color: #38BDF8 !important;
       font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
       font-weight: 700 !important;
       font-size: 13.5px !important;
@@ -326,7 +326,24 @@ core_head = """
     }
 
     .n4-footer_bottom_link_list a:hover .n4-footer_link_text {
-      color: #58EDA2 !important;
+      color: #38BDF8 !important;
+    }
+
+    .n4-footer_bottom_content {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .n4-footer_bottom_body2 {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .n4-footer_bottom_text {
+      text-align: center !important;
+      width: 100% !important;
     }
 
     @media (max-width: 991px) {
@@ -418,7 +435,7 @@ core_head = """
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
-        background-color: #013126 !important;
+        background-color: #0B1E36 !important;
         border-radius: 12px !important;
         padding: 16px 20px !important;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
@@ -452,7 +469,7 @@ core_head = """
 
       .nav-menu-4.is-open .nav__link-item:hover,
       .nav-menu-4.is-open .nav__link-item:active {
-        color: #58EDA2 !important;
+        color: #38BDF8 !important;
         padding-left: 6px !important;
       }
 
@@ -497,6 +514,44 @@ core_head = """
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+
+    /* Blue Theme Global Overrides */
+    .cta__green,
+    .cta__green.mr-0 {
+      background-color: #0066CC !important;
+    }
+    .cta__green:hover,
+    .cta__green.mr-0:hover {
+      background-color: #0052A3 !important;
+    }
+    .cta__outlined {
+      color: #0066CC !important;
+      outline-color: #0066CC !important;
+    }
+    ::selection {
+      background: #0066CC !important;
+      color: #ffffff !important;
+    }
+    .w-slider-dot.w-active::before {
+      background-color: #0066CC !important;
+    }
+    .web-banner.background-color-dark-green {
+      background-color: #F0F9FF !important;
+    }
+    .banner-text p, .banner-text a, .web-banner-close .button-close {
+      color: #0B1E36 !important;
+    }
+    .video-placeholder-normal p.video-placeholder-text-normal {
+      border-color: #0066CC !important;
+      background-color: #0066CC !important;
+    }
+    .w-tab-link.w--current {
+      color: #0066CC !important;
+    }
+    .w-tab-link.w--current::after {
+      background-color: #0066CC !important;
     }
 
     @media (max-width: 480px) {
@@ -582,7 +637,7 @@ if nav_menu:
 
     mobile_cta = BeautifulSoup("""
     <div class="mobile-menu-cta-wrap">
-      <a href="tel:9384190971" style="background: #00856F; color: #ffffff;">
+      <a href="tel:9384190971" style="background: #0066CC; color: #ffffff;">
         📞 Call 24/7 Helpline: 93841 90971
       </a>
       <a href="https://wa.me/919384190971" target="_blank" style="background: #25D366; color: #ffffff;">
@@ -852,7 +907,7 @@ if sec5:
         marquee_list.clear()
         for city in cities:
             badge = soup.new_tag('div', attrs={'class': 'n4-marquee_logo_wrap', 'data-marquee': 'item', 'style': 'display: flex; align-items: center; justify-content: center; padding: 0 1.5rem;'})
-            span = soup.new_tag('span', style="font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; color: #58EDA2; opacity: 0.9; white-space: nowrap;")
+            span = soup.new_tag('span', style="font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; color: #38BDF8; opacity: 0.9; white-space: nowrap;")
             span.string = f"•  {city}"
             badge.append(span)
             marquee_list.append(badge)
@@ -908,9 +963,9 @@ facility_html = """
   <div class="n4-u-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
     <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
       <div class="n4-g_subtitle_wrap" style="display: inline-block; margin-bottom: 0.75rem;">
-        <span class="n4-g_subtitle_text" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00856F;">Vadipatti, Madurai Campus</span>
+        <span class="n4-g_subtitle_text" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0066CC;">Vadipatti, Madurai Campus</span>
       </div>
-      <h2 class="n4-g_heading n4-u-text-style-h1" style="font-family: 'Domaine Display', 'Ivarheadline', serif; font-size: 2.75rem; color: #013126; margin-bottom: 1rem; line-height: 1.2;">
+      <h2 class="n4-g_heading n4-u-text-style-h1" style="font-family: 'Domaine Display', 'Ivarheadline', serif; font-size: 2.75rem; color: #0B1E36; margin-bottom: 1rem; line-height: 1.2;">
         Peaceful healing environment designed for complete recovery
       </h2>
       <p class="n4-u-text-style-medium" style="font-size: 1.1rem; color: #4A5568; line-height: 1.6;">
@@ -923,10 +978,10 @@ facility_html = """
       <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: none; transition: transform 0.3s ease;">
         <div style="position: relative; height: 220px; overflow: hidden;">
           <img src="facility-campus.jpg" alt="Peaceful Vadipatti Campus" style="width: 100%; height: 100%; object-fit: cover;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(1,49,38,0.85); color: #58EDA2; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
+          <span style="position: absolute; top: 12px; right: 12px; background: rgba(11,30,54,0.85); color: #38BDF8; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #013126; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Peaceful Vadipatti Campus</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B1E36; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Peaceful Vadipatti Campus</h3>
           <p style="font-size: 0.9rem; color: #64748B; line-height: 1.5; margin: 0; font-family: Helveticanowdisplay, Arial, sans-serif;">Green, tranquil, and free from urban noise and negative triggers to help individuals focus entirely on physical and mental renewal.</p>
         </div>
       </div>
@@ -934,10 +989,10 @@ facility_html = """
       <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: none; transition: transform 0.3s ease;">
         <div style="position: relative; height: 220px; overflow: hidden;">
           <img src="facility-counseling.jpg" alt="Private Counseling Suites" style="width: 100%; height: 100%; object-fit: cover;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(1,49,38,0.85); color: #58EDA2; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
+          <span style="position: absolute; top: 12px; right: 12px; background: rgba(11,30,54,0.85); color: #38BDF8; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #013126; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Counseling & Therapy Suites</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B1E36; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Counseling & Therapy Suites</h3>
           <p style="font-size: 0.9rem; color: #64748B; line-height: 1.5; margin: 0; font-family: Helveticanowdisplay, Arial, sans-serif;">100% confidential, comfortable consultation rooms for one-on-one psychological counseling, CBT, and restorative family therapy.</p>
         </div>
       </div>
@@ -945,10 +1000,10 @@ facility_html = """
       <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: none; transition: transform 0.3s ease;">
         <div style="position: relative; height: 220px; overflow: hidden;">
           <img src="facility-meditation.jpg" alt="Yoga & Meditation Hall" style="width: 100%; height: 100%; object-fit: cover;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(1,49,38,0.85); color: #58EDA2; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
+          <span style="position: absolute; top: 12px; right: 12px; background: rgba(11,30,54,0.85); color: #38BDF8; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #013126; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Yoga, Meditation & Brain Gym</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B1E36; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Yoga, Meditation & Brain Gym</h3>
           <p style="font-size: 0.9rem; color: #64748B; line-height: 1.5; margin: 0; font-family: Helveticanowdisplay, Arial, sans-serif;">Dedicated open-air and indoor halls for morning pranayama, guided mindfulness meditation, brain gym drills, and physical exercise.</p>
         </div>
       </div>
@@ -956,10 +1011,10 @@ facility_html = """
       <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: none; transition: transform 0.3s ease;">
         <div style="position: relative; height: 220px; overflow: hidden;">
           <img src="service-aftercare.jpg" alt="Dining & Recreation Area" style="width: 100%; height: 100%; object-fit: cover;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(1,49,38,0.85); color: #58EDA2; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
+          <span style="position: absolute; top: 12px; right: 12px; background: rgba(11,30,54,0.85); color: #38BDF8; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">Official Photo Updating Soon</span>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #013126; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Recreation & Mind Refreshment</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B1E36; margin-bottom: 0.5rem; font-family: Helveticanowdisplay, -apple-system, BlinkMacSystemFont, Arial, sans-serif;">Recreation & Mind Refreshment</h3>
           <p style="font-size: 0.9rem; color: #64748B; line-height: 1.5; margin: 0; font-family: Helveticanowdisplay, Arial, sans-serif;">Clean, hygienic dining serving nutritious wholesome meals, accompanied by indoor games, library, and community peer bonding.</p>
         </div>
       </div>
@@ -1012,6 +1067,18 @@ if footer:
     if f_form_wrap:
         f_form_wrap.decompose()
 
+    # Remove non-used pages from footer: Terms, Privacy, Security, Cookie Policy, Safety Info, Ketch, etc.
+    f_bottom_body = footer.find(class_='n4-footer_bottom_body')
+    if f_bottom_body:
+        f_bottom_body.decompose()
+
+    for el in footer.find_all('a'):
+        href = el.get('href', '')
+        if any(bad in href for bad in ['/app/', '/lp/', '/security', 'ketch']):
+            parent_li = el.find_parent('li')
+            if parent_li: parent_li.decompose()
+            else: el.decompose()
+
     # Remove unwanted things: "Verify Approval for www.mavenclinic.com" (LegitScript seal)
     for el in footer.find_all(lambda tag: tag.name in ['div', 'a', 'img'] and (
         'legitscript' in tag.get('href', '').lower() or 
@@ -1037,7 +1104,7 @@ if footer:
     if len(cols) >= 1:
         cols[0].clear()
         cols[0].append(BeautifulSoup("""
-        <div class="footer-col-title" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Our Treatments</div>
+        <div class="footer-col-title" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Our Treatments</div>
         <a class="n4-footer_link_wrap w-inline-block" href="#services"><div class="n4-footer_link_text">Alcohol De-Addiction</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="#services"><div class="n4-footer_link_text">Drug De-Addiction</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="#services"><div class="n4-footer_link_text">Psychiatric Care &amp; Counseling</div></a>
@@ -1051,7 +1118,7 @@ if footer:
     if len(cols) >= 2:
         cols[1].clear()
         cols[1].append(BeautifulSoup("""
-        <div class="footer-col-title" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">About The Centre</div>
+        <div class="footer-col-title" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">About The Centre</div>
         <a class="n4-footer_link_wrap w-inline-block" href="#about"><div class="n4-footer_link_text">About Akrura</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="#facilities"><div class="n4-footer_link_text">Vadipatti Campus Tour</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="tel:9384190971"><div class="n4-footer_link_text">Doctor Supervision (24/7)</div></a>
@@ -1063,7 +1130,7 @@ if footer:
     if len(cols) >= 3:
         cols[2].clear()
         cols[2].append(BeautifulSoup("""
-        <div class="footer-col-title" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Tamil Nadu Coverage</div>
+        <div class="footer-col-title" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Tamil Nadu Coverage</div>
         <a class="n4-footer_link_wrap w-inline-block" href="tel:9384190971"><div class="n4-footer_link_text">Madurai &amp; Vadipatti (Campus)</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="tel:9384190971"><div class="n4-footer_link_text">Chennai Patient Admissions</div></a>
         <a class="n4-footer_link_wrap w-inline-block" href="tel:9384190971"><div class="n4-footer_link_text">Coimbatore &amp; Tiruppur</div></a>
@@ -1075,7 +1142,7 @@ if footer:
     if len(cols) >= 4:
         cols[3].clear()
         cols[3].append(BeautifulSoup("""
-        <div class="footer-col-title" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Contact &amp; Location</div>
+        <div class="footer-col-title" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;">Contact &amp; Location</div>
         <div style="font-family: Helveticanowdisplay, Arial, sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin-bottom: 14px;">
           <strong style="color: #ffffff; display: block; margin-bottom: 4px; font-weight: 600;">Vadipatti Campus:</strong>
           5/96/13, Street-3, Mettuperumal Nagar,<br>
@@ -1083,13 +1150,13 @@ if footer:
           <span style="color: rgba(255, 255, 255, 0.55); font-size: 12.5px;">(Near Madurai - Dindigul Main Road)</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 9px; margin-bottom: 10px;">
-          <a href="tel:9384190971" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 600; text-decoration: none; font-size: 14.5px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
+          <a href="tel:9384190971" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 600; text-decoration: none; font-size: 14.5px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
             <span>📞</span> +91 93841 90971
           </a>
-          <a href="https://wa.me/919384190971" target="_blank" style="color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 600; text-decoration: none; font-size: 14.5px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
+          <a href="https://wa.me/919384190971" target="_blank" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 600; text-decoration: none; font-size: 14.5px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
             <span>💬</span> WhatsApp 24/7 Helpline
           </a>
-          <a href="https://maps.google.com/?q=Vadipatti,+Madurai,+Tamil+Nadu" target="_blank" style="color: #2EDAF1; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 500; text-decoration: none; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px;">
+          <a href="https://maps.google.com/?q=Vadipatti,+Madurai,+Tamil+Nadu" target="_blank" style="color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 500; text-decoration: none; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px;">
             <span>📍</span> View on Google Maps &rarr;
           </a>
         </div>
@@ -1100,7 +1167,7 @@ if footer:
     if right_col:
         right_title = soup.new_tag('div', attrs={
             'class': 'footer-col-title',
-            'style': 'color: #58EDA2; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;'
+            'style': 'color: #38BDF8; font-family: Helveticanowdisplay, Arial, sans-serif; font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px;'
         })
         right_title.string = "Connect & Trust"
         right_col.insert(0, right_title)
@@ -1187,14 +1254,14 @@ final_html = str(soup)
 final_html = re.sub(
     r'initial:\s*\{\s*backgroundColor:[^}]*text:\s*"Supporting working parents"\s*\},[\s\n]*looping:\s*\[[^\]]*\]',
     '''initial: {
-          backgroundColor: "#00856F",
+          backgroundColor: "#0066CC",
           text: "Alcohol & Drug De-Addiction"
         },
         looping: [
-          { backgroundColor: "#00856F", text: "Alcohol & Drug De-Addiction" },
+          { backgroundColor: "#0066CC", text: "Alcohol & Drug De-Addiction" },
           { backgroundColor: "#2EDAF1", text: "Psychiatric Care & Counseling" },
           { backgroundColor: "#FFC728", text: "Yoga, Meditation & Brain Gym" },
-          { backgroundColor: "#58EDA2", text: "Recovering with Dignity" }
+          { backgroundColor: "#38BDF8", text: "Recovering with Dignity" }
         ]''',
     final_html,
     flags=re.DOTALL
@@ -1342,6 +1409,24 @@ enhancements = """
 """
 
 final_html = final_html.replace('</body>', enhancements + '\n</body>')
+
+# 21. Global Color Replacement (Green -> Blue theme)
+for old_c, new_c in [
+    ('#013126', '#0B1E36'),
+    ('#00856f', '#0066CC'),
+    ('#00856F', '#0066CC'),
+    ('#006e5c', '#0052A3'),
+    ('#58eda2', '#38BDF8'),
+    ('#58EDA2', '#38BDF8'),
+    ('#035748', '#0E3A68'),
+    ('#005c4d', '#0E3A68'),
+    ('#005d4e', '#0E3A68'),
+    ('#028c74', '#0066CC'),
+    ('#263633', '#1E293B'),
+    ('rgba(1,49,38,', 'rgba(11,30,54,'),
+    ('rgba(1, 49, 38,', 'rgba(11, 30, 54,'),
+]:
+    final_html = final_html.replace(old_c, new_c)
 
 # Write output to index.html
 with open(r'e:\Clients\Website\From Sathesh bro\akura\index.html', 'w', encoding='utf-8') as f:

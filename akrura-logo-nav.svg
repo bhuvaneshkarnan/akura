@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 42" width="100%" height="100%" fill="none">
   <!-- Lotus & Healing Cross Emblem -->
   <g transform="translate(1, 3)">
-    <circle cx="18" cy="18" r="17" fill="#00856F" fill-opacity="0.12"/>
-    <circle cx="18" cy="18" r="15.5" stroke="#00856F" stroke-width="1.2" stroke-dasharray="2 1.5"/>
-    <path d="M18 7 C18 13, 13 17, 18 27 C23 17, 18 13, 18 7 Z" fill="#00856F"/>
+    <circle cx="18" cy="18" r="17" fill="#0066CC" fill-opacity="0.12"/>
+    <circle cx="18" cy="18" r="15.5" stroke="#0066CC" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+    <path d="M18 7 C18 13, 13 17, 18 27 C23 17, 18 13, 18 7 Z" fill="#0066CC"/>
     <path d="M18 13 C14 16, 9 19, 12 25 C16 25, 17.5 22, 18 20.5 Z" fill="#2EDAF1"/>
     <path d="M18 13 C22 16, 27 19, 24 25 C20 25, 18.5 22, 18 20.5 Z" fill="#2EDAF1"/>
     <circle cx="18" cy="17" r="2.2" fill="#FFC728"/>
   </g>
   <!-- Brand Typography using exact Helveticanowdisplay -->
-  <text x="44" y="22" font-family="Helveticanowdisplay, Arial, sans-serif" font-size="19" font-weight="700" fill="#013126" letter-spacing="0.5">AKRURA</text>
-  <text x="45" y="34" font-family="Helveticanowdisplay, Arial, sans-serif" font-size="7.5" font-weight="600" fill="#00856F" letter-spacing="1.2">DE-ADDICTION &amp; REHAB</text>
+  <text x="44" y="22" font-family="Helveticanowdisplay, Arial, sans-serif" font-size="19" font-weight="700" fill="#0B1E36" letter-spacing="0.5">AKRURA</text>
+  <text x="45" y="34" font-family="Helveticanowdisplay, Arial, sans-serif" font-size="7.5" font-weight="600" fill="#0066CC" letter-spacing="1.2">DE-ADDICTION &amp; REHAB</text>
 </svg>
