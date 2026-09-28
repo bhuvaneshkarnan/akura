@@ -583,11 +583,11 @@ if title_tag:
 
 for meta in soup.find_all('meta'):
     name = meta.get('name', '').lower()
-    prop = meta.get('prop', '').lower()
-    if name == 'description' or prop == 'og:description' or prop == 'twitter:description':
+    prop = meta.get('property', '').lower()
+    if name == 'description' or prop == 'og:description' or prop == 'twitter:description' or name == 'twitter:description':
         meta['content'] = "Akrura De Addiction & Rehabilitation Centre in Vadipatti, Madurai is a trusted centre for Alcohol, Drug De-addiction and Psychiatric Care. Serving All Over Tamil Nadu including Chennai, Erode, Salem, Tiruppur, Coimbatore. Call 93841 90971."
-    if prop == 'og:title' or prop == 'twitter:title':
-        meta['content'] = "Akrura De Addiction & Rehabilitation Centre | Vadipatti, Madurai"
+    if prop == 'og:title' or prop == 'twitter:title' or name == 'twitter:title':
+        meta['content'] = "Akrura De Addiction & Rehabilitation Centre | Vadipatti, Madurai - 24/7 Care"
 
 # 7. Announcement Bar
 announcement_text = soup.find(class_='web-banner-text')
@@ -716,6 +716,23 @@ if hero:
 # 11. Section 1: Services Slider (section.n4-section_wrap)
 sec1 = soup.find_all('section')[0]
 sec1['id'] = "services"
+
+services_heading = sec1.find(class_='n4-services_heading')
+if services_heading:
+    services_heading.clear()
+    p1 = soup.new_tag('p')
+    p1.string = "De-addiction care designed for individuals & families that's personal"
+    p2 = soup.new_tag('p')
+    p2.append(" ")
+    strong_proven = soup.new_tag('strong', attrs={'class': 'w-variant-e6e6ef85-7f68-b628-dc28-14eb31cddc1a'})
+    strong_proven.string = "and proven"
+    p2.append(strong_proven)
+    services_heading.append(p1)
+    services_heading.append(p2)
+
+services_subtext = sec1.find(class_='n4-services_text')
+if services_subtext:
+    services_subtext.string = "Trusted across Tamil Nadu for alcohol, drug de-addiction, and psychiatric care with 24/7 medical support and compassionate rehabilitation."
 
 services_data = [
     {
@@ -885,6 +902,11 @@ if len(all_sections) >= 4:
     for i in range(min(len(tab_links), len(tab_names))):
         tab_links[i].string = tab_names[i]
 
+    for a_tag in sec4.find_all('a'):
+        h = a_tag.get('href', '')
+        if 'for-' in h or 'mavenclinic' in h:
+            a_tag['href'] = "#services"
+
     # Change button in Section 4
     btn_s4 = sec4.find(class_='n4-btn_main_wrap')
     if btn_s4:
@@ -934,6 +956,10 @@ if sec6:
     ]
     for i in range(min(len(story_quotes), len(story_replacements))):
         story_quotes[i].string = story_replacements[i]
+
+    stories_sub = sec6.find(class_='n4-stories_text')
+    if stories_sub:
+        stories_sub.string = "Discover how our personalized de-addiction and psychiatric care has transformed the lives of patients and families across Tamil Nadu."
 
     authors = sec6.find_all(class_='n4-stories_tabs_author')
     author_names = ["S. Rajesh", "M. Karthik", "P. Anandhi"]
