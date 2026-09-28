@@ -255,39 +255,51 @@ body {
       display: block !important;
     }
 
-    /* Nav Menu Links - Exact Helveticanowdisplay font used in the design */
-    .nav-menu-4 {
-      display: flex !important;
-      align-items: center !important;
-      gap: 32px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      background: transparent !important;
-      box-shadow: none !important;
-      overflow: visible !important;
-    }
+    /* Desktop Nav Menu Links */
+    @media (min-width: 992px) {
+      .header-nav-btn {
+        display: none !important;
+      }
 
-    .nav-menu-4 .nav__link-item {
-      font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
-      font-size: 15.5px !important;
-      font-weight: 500 !important;
-      color: #263633 !important;
-      padding: 6px 4px !important;
-      text-decoration: none !important;
-      letter-spacing: 0.2px !important;
-      line-height: 1.2 !important;
-      transition: color 0.2s ease !important;
-      border: none !important;
-      border-bottom: 2px solid transparent !important;
-    }
+      .nav-menu-4 {
+        display: flex !important;
+        align-items: center !important;
+        gap: 32px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        position: static !important;
+        width: auto !important;
+      }
 
-    .nav-menu-4 .nav__link-item:hover {
-      color: #00856F !important;
-    }
+      .nav-menu-4 .nav__link-item {
+        font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
+        font-size: 15.5px !important;
+        font-weight: 500 !important;
+        color: #263633 !important;
+        padding: 6px 4px !important;
+        text-decoration: none !important;
+        letter-spacing: 0.2px !important;
+        line-height: 1.2 !important;
+        transition: color 0.2s ease !important;
+        border: none !important;
+        border-bottom: 2px solid transparent !important;
+      }
 
-    .nav-menu-4 .nav__link-item.w--current {
-      color: #00856F !important;
-      border-bottom: 2px solid #00856F !important;
+      .nav-menu-4 .nav__link-item:hover {
+        color: #00856F !important;
+      }
+
+      .nav-menu-4 .nav__link-item.w--current {
+        color: #00856F !important;
+        border-bottom: 2px solid #00856F !important;
+      }
+
+      .mobile-menu-cta-wrap {
+        display: none !important;
+      }
     }
 
     /* Right Block & Book Consultation Button */
@@ -413,25 +425,153 @@ body {
 
     @media (max-width: 991px) {
       .navbar.nav-v2 {
-        width: 96% !important;
+        width: 94% !important;
+        max-width: 100% !important;
         top: 10px !important;
       }
+
       .content__nav {
-        padding: 10px 18px !important;
-        min-height: 56px !important;
+        position: relative !important;
+        padding: 8px 14px !important;
+        min-height: 54px !important;
+        border-radius: 12px !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
       }
+
+      .container__navigation {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        gap: 6px !important;
+      }
+
+      .branding__maven {
+        flex-shrink: 0 !important;
+      }
+
       .branding__maven img.nav-logo-lg {
-        height: 32px !important;
+        height: 28px !important;
+        width: auto !important;
+        max-width: 145px !important;
       }
-      .nav-menu-4 {
-        gap: 16px !important;
+
+      .nav__right-block {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
       }
+
       .header__btn-block .cta__green.mr-0 {
         height: 36px !important;
         line-height: 36px !important;
-        padding: 0 16px !important;
-        font-size: 13.5px !important;
+        padding: 0 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        border-radius: 6px !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
       }
+
+      .header-nav-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 38px !important;
+        height: 38px !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: none !important;
+      }
+
+      .menu-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .menu-icon-v2 {
+        width: 22px !important;
+        height: 16px !important;
+        position: relative !important;
+      }
+
+      /* Mobile Nav Menu Dropdown */
+      .nav-menu-4 {
+        display: none !important;
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background-color: #013126 !important;
+        border-radius: 12px !important;
+        padding: 16px 20px !important;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-sizing: border-box !important;
+        z-index: 10000 !important;
+        margin: 0 !important;
+      }
+
+      .nav-menu-4.is-open {
+        display: flex !important;
+        flex-direction: column !important;
+        animation: mobileNavFade 0.2s ease forwards !important;
+      }
+
+      .nav-menu-4.is-open .nav__link-item {
+        font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', Arial, sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+        padding: 13px 4px !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease, padding-left 0.2s ease !important;
+        background: transparent !important;
+      }
+
+      .nav-menu-4.is-open .nav__link-item:hover,
+      .nav-menu-4.is-open .nav__link-item:active {
+        color: #58EDA2 !important;
+        padding-left: 6px !important;
+      }
+
+      .nav-menu-4.is-open .mobile-menu-cta-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 14px !important;
+        padding-top: 14px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+      }
+
+      .nav-menu-4.is-open .mobile-menu-cta-wrap a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        border-radius: 6px !important;
+        padding: 11px 16px !important;
+        font-family: Helveticanowdisplay, Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+      }
+
       .n4-footer_top {
         flex-direction: column !important;
         gap: 32px !important;
@@ -442,7 +582,28 @@ body {
       }
     }
 
-    @media (max-width: 540px) {
+    @keyframes mobileNavFade {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .branding__maven img.nav-logo-lg {
+        height: 24px !important;
+        max-width: 120px !important;
+      }
+      .header__btn-block .cta__green.mr-0 {
+        padding: 0 9px !important;
+        font-size: 11.5px !important;
+        height: 32px !important;
+        line-height: 32px !important;
+      }
       .n4-footer_content_left {
         grid-template-columns: 1fr !important;
       }
@@ -1640,7 +1801,16 @@ body {
     }); 
   }
   
-</script></div></div></div></div></div><div class="navbar nav-v2 w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner"><div class="content__nav"><div class="container__navigation"><a aria-current="page" aria-label="Akrura De Addiction &amp; Rehabilitation Centre Home" class="branding__maven w-nav-brand w--current" data-wf-ao-click-engagement-tracking="true" data-wf-component-context="%5B%7B%22componentId%22%3A%221844fc65-b2a5-c4cf-163e-481cabbe77ec%22%2C%22instanceId%22%3A%226d0c8c87-3452-2cd4-d920-b1b3b9888b49%22%7D%2C%7B%22componentId%22%3A%22fe0dc579-d8ee-6346-cd16-ae4219dcd761%22%2C%22instanceId%22%3A%220728b815-9a01-0de3-a77f-37e0effe5088%22%7D%5D" data-wf-element-id="fe0dc579-d8ee-6346-cd16-ae4219dcd764" data-wf-native-id-path="6d0c8c87-3452-2cd4-d920-b1b3b9888b49:0728b815-9a01-0de3-a77f-37e0effe5088:fe0dc579-d8ee-6346-cd16-ae4219dcd764" href="#" tabindex="0"><img alt="Akrura De Addiction &amp; Rehabilitation Centre" class="nav-logo nav-logo-lg" loading="lazy" src="akrura-logo-nav.svg" style="height: 38px; width: auto; max-width: 210px; display: block;"/><img alt="Akrura Icon" class="nav-logo nav-logo-sm" loading="lazy" src="akrura-logo-icon.svg" style="width: 36px; height: 36px;"/></a><nav class="nav-menu-4 w-nav-menu" role="navigation"><a class="nav__link-item cc-nav w-nav-link" href="#home">Home</a><a class="nav__link-item cc-nav w-nav-link" href="#about">About</a><a class="nav__link-item cc-nav w-nav-link" href="#services">Services</a><a class="nav__link-item cc-nav w-nav-link" href="#contact">Contact</a></nav><div class="nav__right-block"><div class="header__btn-block"><a class="cta__green mr-0 w-button" data-wf-ao-click-engagement-tracking="true" data-wf-component-context="%5B%7B%22componentId%22%3A%221844fc65-b2a5-c4cf-163e-481cabbe77ec%22%2C%22instanceId%22%3A%226d0c8c87-3452-2cd4-d920-b1b3b9888b49%22%7D%2C%7B%22componentId%22%3A%22fe0dc579-d8ee-6346-cd16-ae4219dcd761%22%2C%22instanceId%22%3A%220728b815-9a01-0de3-a77f-37e0effe5088%22%7D%5D" data-wf-element-id="fe0dc579-d8ee-6346-cd16-ae4219dcd7c6" data-wf-native-id-path="6d0c8c87-3452-2cd4-d920-b1b3b9888b49:0728b815-9a01-0de3-a77f-37e0effe5088:fe0dc579-d8ee-6346-cd16-ae4219dcd7c6" href="#contact" tabindex="0">Book consultation</a></div><div class="header-nav-btn mr-0 w-nav-button"><div class="menu-button menu-btn-v2 w-nav-button" data-w-id="fe0dc579-d8ee-6346-cd16-ae4219dcd7c9"><div class="menu-icon-v2"><div class="icon-line"></div><div class="icon-line"></div><div class="icon-line"></div><div class="icon-line"></div></div></div><div class="w-embed"><style>
+</script></div></div></div></div></div><div class="navbar nav-v2 w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner"><div class="content__nav"><div class="container__navigation"><a aria-current="page" aria-label="Akrura De Addiction &amp; Rehabilitation Centre Home" class="branding__maven w-nav-brand w--current" data-wf-ao-click-engagement-tracking="true" data-wf-component-context="%5B%7B%22componentId%22%3A%221844fc65-b2a5-c4cf-163e-481cabbe77ec%22%2C%22instanceId%22%3A%226d0c8c87-3452-2cd4-d920-b1b3b9888b49%22%7D%2C%7B%22componentId%22%3A%22fe0dc579-d8ee-6346-cd16-ae4219dcd761%22%2C%22instanceId%22%3A%220728b815-9a01-0de3-a77f-37e0effe5088%22%7D%5D" data-wf-element-id="fe0dc579-d8ee-6346-cd16-ae4219dcd764" data-wf-native-id-path="6d0c8c87-3452-2cd4-d920-b1b3b9888b49:0728b815-9a01-0de3-a77f-37e0effe5088:fe0dc579-d8ee-6346-cd16-ae4219dcd764" href="#" tabindex="0"><img alt="Akrura De Addiction &amp; Rehabilitation Centre" class="nav-logo nav-logo-lg" loading="lazy" src="akrura-logo-nav.svg" style="height: 38px; width: auto; max-width: 210px; display: block;"/><img alt="Akrura Icon" class="nav-logo nav-logo-sm" loading="lazy" src="akrura-logo-icon.svg" style="width: 36px; height: 36px;"/></a><nav class="nav-menu-4 w-nav-menu" role="navigation"><a class="nav__link-item cc-nav w-nav-link" href="#home">Home</a><a class="nav__link-item cc-nav w-nav-link" href="#about">About</a><a class="nav__link-item cc-nav w-nav-link" href="#services">Services</a><a class="nav__link-item cc-nav w-nav-link" href="#contact">Contact</a>
+<div class="mobile-menu-cta-wrap">
+<a href="tel:9384190971" style="background: #00856F; color: #ffffff;">
+        📞 Call 24/7 Helpline: 93841 90971
+      </a>
+<a href="https://wa.me/919384190971" style="background: #25D366; color: #ffffff;" target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+</div>
+</nav><div class="nav__right-block"><div class="header__btn-block"><a class="cta__green mr-0 w-button" data-wf-ao-click-engagement-tracking="true" data-wf-component-context="%5B%7B%22componentId%22%3A%221844fc65-b2a5-c4cf-163e-481cabbe77ec%22%2C%22instanceId%22%3A%226d0c8c87-3452-2cd4-d920-b1b3b9888b49%22%7D%2C%7B%22componentId%22%3A%22fe0dc579-d8ee-6346-cd16-ae4219dcd761%22%2C%22instanceId%22%3A%220728b815-9a01-0de3-a77f-37e0effe5088%22%7D%5D" data-wf-element-id="fe0dc579-d8ee-6346-cd16-ae4219dcd7c6" data-wf-native-id-path="6d0c8c87-3452-2cd4-d920-b1b3b9888b49:0728b815-9a01-0de3-a77f-37e0effe5088:fe0dc579-d8ee-6346-cd16-ae4219dcd7c6" href="#contact" tabindex="0">Book consultation</a></div><div class="header-nav-btn mr-0 w-nav-button"><div class="menu-button menu-btn-v2 w-nav-button" data-w-id="fe0dc579-d8ee-6346-cd16-ae4219dcd7c9"><div class="menu-icon-v2"><div class="icon-line"></div><div class="icon-line"></div><div class="icon-line"></div><div class="icon-line"></div></div></div><div class="w-embed"><style>
 	.w-nav-overlay{
   	 margin-top: -13px;
   }
@@ -3531,7 +3701,7 @@ $(document).ready(function () {
         const u = c.getAttribute('data-rive-url');
         if (u.includes('maven_clock')) c.setAttribute('data-rive-url', 'clock.riv');
         else if (u.includes('maven_bento_flip')) c.setAttribute('data-rive-url', 'flip.riv');
-        else if (u.includes('maven_bento_globe')) c.setAttribute('data-rive-url', 'globe.riv');
+        else if (u.includes('maven_bento_globe')) c.setAttribute('data-rive-url', 'globe.riv?v=2');
       });
     }
 
@@ -3622,25 +3792,28 @@ $(document).ready(function () {
 
       // 3. Mobile Hamburger Menu Toggle
       const menuBtn = document.querySelector('.menu-button');
-      const navMenu = document.querySelector('.nav-menu-4, .w-nav-menu');
+      const navMenu = document.querySelector('.nav-menu-4');
       if (menuBtn && navMenu) {
         menuBtn.addEventListener('click', function(e) {
           e.preventDefault();
-          const isOpen = menuBtn.classList.toggle('w--open');
-          if (isOpen) {
-            navMenu.style.display = 'flex';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.height = 'auto';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.backgroundColor = '#013126';
-            navMenu.style.padding = '1.5rem';
-            navMenu.style.zIndex = '999';
-            navMenu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
-          } else {
-            navMenu.style.display = 'none';
+          e.stopPropagation();
+          const isOpen = navMenu.classList.toggle('is-open');
+          menuBtn.classList.toggle('w--open', isOpen);
+        });
+
+        // Close menu when clicking any nav link
+        navMenu.querySelectorAll('.nav__link-item, a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('is-open');
+            menuBtn.classList.remove('w--open');
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.navbar')) {
+            navMenu.classList.remove('is-open');
+            menuBtn.classList.remove('w--open');
           }
         });
       }

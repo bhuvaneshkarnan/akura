@@ -161,39 +161,51 @@ core_head = """
       display: block !important;
     }
 
-    /* Nav Menu Links - Exact Helveticanowdisplay font used in the design */
-    .nav-menu-4 {
-      display: flex !important;
-      align-items: center !important;
-      gap: 32px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      background: transparent !important;
-      box-shadow: none !important;
-      overflow: visible !important;
-    }
+    /* Desktop Nav Menu Links */
+    @media (min-width: 992px) {
+      .header-nav-btn {
+        display: none !important;
+      }
 
-    .nav-menu-4 .nav__link-item {
-      font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
-      font-size: 15.5px !important;
-      font-weight: 500 !important;
-      color: #263633 !important;
-      padding: 6px 4px !important;
-      text-decoration: none !important;
-      letter-spacing: 0.2px !important;
-      line-height: 1.2 !important;
-      transition: color 0.2s ease !important;
-      border: none !important;
-      border-bottom: 2px solid transparent !important;
-    }
+      .nav-menu-4 {
+        display: flex !important;
+        align-items: center !important;
+        gap: 32px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        position: static !important;
+        width: auto !important;
+      }
 
-    .nav-menu-4 .nav__link-item:hover {
-      color: #00856F !important;
-    }
+      .nav-menu-4 .nav__link-item {
+        font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
+        font-size: 15.5px !important;
+        font-weight: 500 !important;
+        color: #263633 !important;
+        padding: 6px 4px !important;
+        text-decoration: none !important;
+        letter-spacing: 0.2px !important;
+        line-height: 1.2 !important;
+        transition: color 0.2s ease !important;
+        border: none !important;
+        border-bottom: 2px solid transparent !important;
+      }
 
-    .nav-menu-4 .nav__link-item.w--current {
-      color: #00856F !important;
-      border-bottom: 2px solid #00856F !important;
+      .nav-menu-4 .nav__link-item:hover {
+        color: #00856F !important;
+      }
+
+      .nav-menu-4 .nav__link-item.w--current {
+        color: #00856F !important;
+        border-bottom: 2px solid #00856F !important;
+      }
+
+      .mobile-menu-cta-wrap {
+        display: none !important;
+      }
     }
 
     /* Right Block & Book Consultation Button */
@@ -319,25 +331,153 @@ core_head = """
 
     @media (max-width: 991px) {
       .navbar.nav-v2 {
-        width: 96% !important;
+        width: 94% !important;
+        max-width: 100% !important;
         top: 10px !important;
       }
+
       .content__nav {
-        padding: 10px 18px !important;
-        min-height: 56px !important;
+        position: relative !important;
+        padding: 8px 14px !important;
+        min-height: 54px !important;
+        border-radius: 12px !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
       }
+
+      .container__navigation {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        gap: 6px !important;
+      }
+
+      .branding__maven {
+        flex-shrink: 0 !important;
+      }
+
       .branding__maven img.nav-logo-lg {
-        height: 32px !important;
+        height: 28px !important;
+        width: auto !important;
+        max-width: 145px !important;
       }
-      .nav-menu-4 {
-        gap: 16px !important;
+
+      .nav__right-block {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
       }
+
       .header__btn-block .cta__green.mr-0 {
         height: 36px !important;
         line-height: 36px !important;
-        padding: 0 16px !important;
-        font-size: 13.5px !important;
+        padding: 0 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        border-radius: 6px !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
       }
+
+      .header-nav-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 38px !important;
+        height: 38px !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: none !important;
+      }
+
+      .menu-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .menu-icon-v2 {
+        width: 22px !important;
+        height: 16px !important;
+        position: relative !important;
+      }
+
+      /* Mobile Nav Menu Dropdown */
+      .nav-menu-4 {
+        display: none !important;
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background-color: #013126 !important;
+        border-radius: 12px !important;
+        padding: 16px 20px !important;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-sizing: border-box !important;
+        z-index: 10000 !important;
+        margin: 0 !important;
+      }
+
+      .nav-menu-4.is-open {
+        display: flex !important;
+        flex-direction: column !important;
+        animation: mobileNavFade 0.2s ease forwards !important;
+      }
+
+      .nav-menu-4.is-open .nav__link-item {
+        font-family: Helveticanowdisplay, 'Helvetica Now Display', 'Helvetica Now Text', Arial, sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+        padding: 13px 4px !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease, padding-left 0.2s ease !important;
+        background: transparent !important;
+      }
+
+      .nav-menu-4.is-open .nav__link-item:hover,
+      .nav-menu-4.is-open .nav__link-item:active {
+        color: #58EDA2 !important;
+        padding-left: 6px !important;
+      }
+
+      .nav-menu-4.is-open .mobile-menu-cta-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 14px !important;
+        padding-top: 14px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+      }
+
+      .nav-menu-4.is-open .mobile-menu-cta-wrap a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        border-radius: 6px !important;
+        padding: 11px 16px !important;
+        font-family: Helveticanowdisplay, Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+      }
+
       .n4-footer_top {
         flex-direction: column !important;
         gap: 32px !important;
@@ -348,7 +488,28 @@ core_head = """
       }
     }
 
-    @media (max-width: 540px) {
+    @keyframes mobileNavFade {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .branding__maven img.nav-logo-lg {
+        height: 24px !important;
+        max-width: 120px !important;
+      }
+      .header__btn-block .cta__green.mr-0 {
+        padding: 0 9px !important;
+        font-size: 11.5px !important;
+        height: 32px !important;
+        line-height: 32px !important;
+      }
       .n4-footer_content_left {
         grid-template-columns: 1fr !important;
       }
@@ -418,6 +579,18 @@ if nav_menu:
         })
         a_link.string = label
         nav_menu.append(a_link)
+
+    mobile_cta = BeautifulSoup("""
+    <div class="mobile-menu-cta-wrap">
+      <a href="tel:9384190971" style="background: #00856F; color: #ffffff;">
+        📞 Call 24/7 Helpline: 93841 90971
+      </a>
+      <a href="https://wa.me/919384190971" target="_blank" style="background: #25D366; color: #ffffff;">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+    """, 'html.parser')
+    nav_menu.append(mobile_cta)
 
 # Header Button Block: Remove Login, change Book a demo -> Book consultation
 btn_block = soup.find('div', class_='header__btn-block')
@@ -1039,7 +1212,7 @@ enhancements = """
         const u = c.getAttribute('data-rive-url');
         if (u.includes('maven_clock')) c.setAttribute('data-rive-url', 'clock.riv');
         else if (u.includes('maven_bento_flip')) c.setAttribute('data-rive-url', 'flip.riv');
-        else if (u.includes('maven_bento_globe')) c.setAttribute('data-rive-url', 'globe.riv');
+        else if (u.includes('maven_bento_globe')) c.setAttribute('data-rive-url', 'globe.riv?v=2');
       });
     }
 
@@ -1130,25 +1303,28 @@ enhancements = """
 
       // 3. Mobile Hamburger Menu Toggle
       const menuBtn = document.querySelector('.menu-button');
-      const navMenu = document.querySelector('.nav-menu-4, .w-nav-menu');
+      const navMenu = document.querySelector('.nav-menu-4');
       if (menuBtn && navMenu) {
         menuBtn.addEventListener('click', function(e) {
           e.preventDefault();
-          const isOpen = menuBtn.classList.toggle('w--open');
-          if (isOpen) {
-            navMenu.style.display = 'flex';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.height = 'auto';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.backgroundColor = '#013126';
-            navMenu.style.padding = '1.5rem';
-            navMenu.style.zIndex = '999';
-            navMenu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
-          } else {
-            navMenu.style.display = 'none';
+          e.stopPropagation();
+          const isOpen = navMenu.classList.toggle('is-open');
+          menuBtn.classList.toggle('w--open', isOpen);
+        });
+
+        // Close menu when clicking any nav link
+        navMenu.querySelectorAll('.nav__link-item, a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('is-open');
+            menuBtn.classList.remove('w--open');
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.navbar')) {
+            navMenu.classList.remove('is-open');
+            menuBtn.classList.remove('w--open');
           }
         });
       }
