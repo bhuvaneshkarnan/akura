@@ -223,6 +223,25 @@ button {
   background: var(--blue-soft-2);
 }
 
+/* Clean & Minimal Buttons (No Shadows) */
+button,
+.btn-primary,
+.btn-outline,
+.btn-whatsapp,
+.tab-pill,
+.header-helpline {
+  box-shadow: none !important;
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-whatsapp:hover,
+.tab-pill:hover,
+.header-helpline:hover {
+  box-shadow: none !important;
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -234,15 +253,14 @@ button {
   font-weight: 600;
   padding: 10px 22px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 14px rgba(0, 102, 204, 0.25);
+  box-shadow: none;
   transition: var(--transition);
   white-space: nowrap;
 }
 
 .btn-primary:hover {
   background-color: var(--blue-primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 102, 204, 0.35);
+  box-shadow: none;
 }
 
 .btn-outline {
@@ -257,6 +275,7 @@ button {
   font-weight: 600;
   padding: 10px 22px;
   border-radius: var(--radius-pill);
+  box-shadow: none;
   transition: var(--transition);
   white-space: nowrap;
 }
@@ -265,18 +284,18 @@ button {
   border-color: var(--blue-primary);
   color: var(--blue-primary);
   background: #ffffff;
+  box-shadow: none;
 }
 
 .btn-whatsapp {
   background-color: var(--accent-green);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  box-shadow: none;
 }
 
 .btn-whatsapp:hover {
   background-color: #20bd5a;
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-  transform: translateY(-1px);
+  box-shadow: none;
 }
 
 /* Mobile Hamburger */
@@ -760,7 +779,7 @@ button {
   background: var(--blue-primary);
   color: #FFFFFF;
   border-color: var(--blue-primary);
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
+  box-shadow: none;
 }
 
 /* Service Cards Stack (Side-by-Side Content + Photo) */
@@ -1178,7 +1197,8 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+  border: 2px solid rgba(255, 255, 255, 0.9);
   transition: var(--transition);
 }
 
