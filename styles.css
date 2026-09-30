@@ -710,15 +710,14 @@ button:hover,
 }
 
 .benefit-icon-wrap {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
   background: var(--blue-soft);
   color: var(--blue-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
   margin-bottom: 1.25rem;
   transition: var(--transition);
 }
@@ -726,6 +725,37 @@ button:hover,
 .benefit-card:hover .benefit-icon-wrap {
   background: var(--blue-primary);
   color: #FFFFFF;
+}
+
+/* Shopify Polaris Minimal Icon System */
+.polaris-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.benefit-icon-wrap .polaris-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.campus-pin-icon .polaris-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-primary .polaris-icon,
+.btn-outline .polaris-icon,
+.header-helpline .polaris-icon,
+.footer-contact-link .polaris-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 4px;
 }
 
 .benefit-title {
