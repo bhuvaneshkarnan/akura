@@ -42,11 +42,11 @@
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 50, 120, 0.04);
-  --shadow-md: 0 12px 30px -8px rgba(0, 70, 160, 0.08);
-  --shadow-lg: 0 24px 50px -12px rgba(0, 50, 130, 0.12);
-  --shadow-card: 0 8px 24px -4px rgba(0, 30, 80, 0.05);
+  /* Shadows - Minimal & Flat (No Shadows) */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-card: none;
 
   /* Radii */
   --radius-sm: 8px;
@@ -64,6 +64,24 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Universal Clean & Minimal: Zero Box Shadows */
+.hero-card,
+.stat-card,
+.why-card,
+.benefit-card,
+.service-card-split,
+.service-box-card,
+.facility-card,
+.campus-address-card,
+.testimonial-card,
+.featured-card,
+.cta-banner-card,
+.hero-media-badge,
+.site-header,
+.mobile-drawer {
+  box-shadow: none !important;
 }
 
 html {
@@ -141,7 +159,8 @@ button {
 }
 
 .site-header.scrolled {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .navbar-inner {
@@ -324,13 +343,13 @@ button:hover,
 .mobile-drawer {
   display: none;
   position: fixed;
-  top: 74px;
+  top: 66px;
   left: 0;
   right: 0;
   background: #ffffff;
   padding: 1.5rem;
   border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   z-index: 999;
   flex-direction: column;
   gap: 1.25rem;
@@ -491,7 +510,8 @@ button:hover,
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
 }
 
 .hero-media-badge .pulse-dot {
@@ -499,7 +519,7 @@ button:hover,
   height: 9px;
   border-radius: 50%;
   background: var(--accent-sky);
-  box-shadow: 0 0 10px var(--accent-sky);
+  box-shadow: none;
 }
 
 /* ==========================================================================
@@ -520,13 +540,12 @@ button:hover,
   padding: 2rem 1.5rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   transition: var(--transition);
 }
 
 .stat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   border-color: var(--blue-primary);
 }
 
@@ -679,16 +698,15 @@ button:hover,
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
 }
 
 .benefit-card:hover {
-  transform: translateY(-4px);
   border-color: var(--blue-primary);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
 }
 
 .benefit-icon-wrap {
@@ -794,15 +812,15 @@ button:hover,
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-light);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   transition: var(--transition);
 }
 
 .service-card-split:hover {
-  box-shadow: var(--shadow-md);
-  border-color: rgba(0, 102, 204, 0.3);
+  box-shadow: none;
+  border-color: rgba(0, 102, 204, 0.4);
 }
 
 .service-card-content {
@@ -895,15 +913,14 @@ button:hover,
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-light);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
 }
 
 .service-box-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   border-color: var(--blue-primary);
 }
 
@@ -980,14 +997,13 @@ button:hover,
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   transition: var(--transition);
 }
 
 .facility-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
   border-color: var(--blue-primary);
+  box-shadow: none;
 }
 
 .facility-img-wrap {
@@ -1100,7 +1116,7 @@ button:hover,
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xl);
   padding: 2.25rem 2rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1108,8 +1124,7 @@ button:hover,
 }
 
 .testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   border-color: var(--blue-primary);
 }
 
@@ -1164,7 +1179,7 @@ button:hover,
 .testimonial-card.featured-card {
   background: #FFFFFF;
   border: 1.5px solid var(--blue-primary);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   position: relative;
   padding: 1.5rem;
 }
@@ -1235,7 +1250,8 @@ button:hover,
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none;
   position: relative;
   overflow: hidden;
 }
