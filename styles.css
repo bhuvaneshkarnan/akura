@@ -148,7 +148,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 74px;
+  height: 66px;
 }
 
 .brand-logo {
@@ -363,7 +363,7 @@ button:hover,
    HERO SECTION (SPLIT CARD REPLICATING REFERENCE IMAGE)
    ========================================================================== */
 .hero-section {
-  padding: 104px 0 2.5rem 0;
+  padding: 80px 0 2rem 0;
 }
 
 .hero-card {
@@ -372,14 +372,14 @@ button:hover,
   background: #FFFFFF;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   border: 1px solid var(--border-light);
 }
 
 /* Hero Left Column (Soft Blue Container) */
 .hero-content {
   background: linear-gradient(135deg, #EEF5FC 0%, #E8F2FA 100%);
-  padding: 4rem 3.5rem;
+  padding: 2.5rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -389,8 +389,8 @@ button:hover,
 .hero-badge-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 2rem;
+  gap: 12px;
+  margin-bottom: 1.25rem;
 }
 
 .avatar-group {
@@ -1479,8 +1479,14 @@ button:hover,
   .mobile-toggle {
     display: flex;
   }
+  .hero-section {
+    padding: 72px 0 1.25rem 0;
+  }
   .hero-content {
-    padding: 2.5rem 1.5rem;
+    padding: 1.75rem 1.25rem;
+  }
+  .hero-badge-row {
+    margin-bottom: 1rem;
   }
   .hero-title {
     font-size: 2.25rem;
