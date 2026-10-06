@@ -115,7 +115,7 @@
               <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-row-2col">
               <div class="form-group">
                 <label for="phone">Phone / WhatsApp Number *</label>
                 <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" required>
@@ -259,7 +259,9 @@
        ======================================================================== -->
   <footer class="site-footer">
     <div class="container">
+      <!-- 3-Column Clean Navigation Grid (Zero unwanted/fake links) -->
       <div class="footer-top-grid">
+        <!-- Col 1: Quick Links -->
         <div>
           <div class="footer-col-title">Quick Links</div>
           <ul class="footer-link-list">
@@ -271,52 +273,39 @@
           </ul>
         </div>
 
+        <!-- Col 2: Treatment Programs -->
         <div>
-          <div class="footer-col-title">Services We Offer</div>
+          <div class="footer-col-title">Treatment Programs</div>
           <ul class="footer-link-list">
             <li><a href="services.html#alcohol" class="footer-link">Alcohol De-Addiction</a></li>
             <li><a href="services.html#drugs" class="footer-link">Drug Rehabilitation</a></li>
-            <li><a href="services.html#psychiatric" class="footer-link">Psychiatric Care &amp; Counseling</a></li>
-            <li><a href="services.html#detox" class="footer-link">Detoxification &amp; Medical Support</a></li>
-            <li><a href="services.html#family" class="footer-link">Family Counseling</a></li>
-            <li><a href="services.html#yoga" class="footer-link">Yoga, Meditation &amp; Brain Gym</a></li>
-            <li><a href="services.html#aftercare" class="footer-link">Aftercare &amp; Rehabilitation</a></li>
+            <li><a href="services.html#psychiatric" class="footer-link">Psychiatric Care &amp; Dual Diagnosis</a></li>
+            <li><a href="services.html#detox" class="footer-link">Medical Detoxification Support</a></li>
+            <li><a href="services.html#family" class="footer-link">Family Counseling &amp; Reintegration</a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Vadipatti Campus & Direct Contact -->
         <div>
-          <div class="footer-col-title">Tamil Nadu Coverage</div>
-          <ul class="footer-link-list">
-            <li><a href="tel:9384190971" class="footer-link">Vadipatti (Campus)</a></li>
-            <li><a href="tel:9384190971" class="footer-link">Madurai District</a></li>
-            <li><a href="tel:9384190971" class="footer-link">Chennai Admissions</a></li>
-            <li><a href="tel:9384190971" class="footer-link">Coimbatore &amp; Tiruppur</a></li>
-            <li><a href="tel:9384190971" class="footer-link">Salem &amp; Erode</a></li>
-            <li><a href="tel:9384190971" class="footer-link">Dindigul &amp; Trichy</a></li>
-            <li><a href="tel:9384190971" class="footer-link">All Over Tamil Nadu</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Contact &amp; Location</div>
+          <div class="footer-col-title">Vadipatti Campus &amp; Admissions</div>
           <div class="footer-contact-info">
-            <p>
-              <strong style="color: #FFFFFF; display: block; margin-bottom: 4px;">Vadipatti Campus:</strong>
+            <p style="margin-bottom: 0.5rem;">
+              <strong style="color: #FFFFFF; display: block; margin-bottom: 4px;">Akrura Rehabilitation Centre</strong>
               5/96/13, Street-3, Mettuperumal Nagar,<br>
               Vadipatti, Madurai - 625218, Tamil Nadu.<br>
-              <span style="color: rgba(255,255,255,0.55); font-size: 0.82rem;">(Near Madurai - Dindigul Main Road)</span>
+              <span style="color: rgba(255,255,255,0.6); font-size: 0.82rem;">(Serving patients from all districts across Tamil Nadu)</span>
             </p>
             <a href="tel:9384190971" class="footer-contact-link">
               <svg class="polaris-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +91 93841 90971
+              +91 93841 90971 (24/7 Helpline)
             </a>
             <a href="https://wa.me/919384190971" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
               <svg class="polaris-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-              WhatsApp 24/7 Helpline
+              WhatsApp 24/7 Admissions
             </a>
             <a href="https://maps.google.com/?q=Vadipatti,+Madurai,+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="footer-contact-link" style="color: var(--accent-sky);">
               <svg class="polaris-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              View on Google Maps &rarr;
+              Open in Google Maps &rarr;
             </a>
           </div>
         </div>
@@ -368,5 +357,16 @@
       }
     });
   </script>
+
+  <!-- Sticky WhatsApp Floating Button (Clean & Zero Shadow) -->
+  <a href="https://wa.me/919384190971?text=Hello%20Akrura%20Rehab,%20I%20need%20confidential%20admission%20guidance." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-sticky-btn" 
+     aria-label="Chat with Akrura Admissions on WhatsApp">
+    <svg class="polaris-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    <span>WhatsApp Us</span>
+  </a>
+
 </body>
 </html>
