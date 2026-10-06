@@ -1017,7 +1017,7 @@ button:hover,
 
 .facility-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -1124,6 +1124,46 @@ button:hover,
 .campus-address-text p {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.campus-arrival-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.campus-arrival-img {
+  height: 100%;
+  min-height: 280px;
+}
+
+.campus-arrival-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.campus-arrival-content {
+  padding: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .campus-arrival-card {
+    grid-template-columns: 1fr;
+  }
+  .campus-arrival-img {
+    height: 220px;
+    min-height: auto;
+  }
+  .campus-arrival-content {
+    padding: 1.5rem;
+  }
 }
 
 /* ==========================================================================
