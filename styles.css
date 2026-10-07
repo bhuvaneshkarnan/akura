@@ -1637,6 +1637,17 @@ button:hover,
   font-family: var(--font-heading);
 }
 
+.team-avatar-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--border-light);
+  display: block;
+  flex-shrink: 0;
+}
+
 .team-badge {
   font-size: 0.75rem;
   font-weight: 700;
