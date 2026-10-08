@@ -178,8 +178,11 @@ button {
 }
 
 .brand-logo img {
-  height: 38px;
+  height: 42px;
   width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -1470,6 +1473,9 @@ button:hover,
 .footer-brand-box img {
   height: 48px;
   width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-tagline {
@@ -2045,6 +2051,10 @@ button:hover,
   .mobile-toggle {
     display: flex;
   }
+  .brand-logo img {
+    height: 36px;
+    max-width: 150px;
+  }
 
   /* Section Spacing */
   .hero-section {
@@ -2301,6 +2311,10 @@ button:hover,
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
+  }
+  .brand-logo img {
+    height: 32px;
+    max-width: 135px;
   }
   .hero-content {
     padding: 1.35rem 1rem;
