@@ -1,0 +1,6 @@
+# Akrura De Addiction & Rehabilitation Centre
+# https://akruradeaddiction.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://akruradeaddiction.com/sitemap.xml

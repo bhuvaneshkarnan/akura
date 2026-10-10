@@ -1,0 +1,21 @@
+{
+  "name": "Akrura De Addiction & Rehabilitation Centre",
+  "short_name": "Akrura Rehab",
+  "description": "Trusted De-Addiction, Alcohol, Drug Rehabilitation & Psychiatric Care Centre in Vadipatti, Madurai, Tamil Nadu.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0B1E36",
+  "theme_color": "#0066CC",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

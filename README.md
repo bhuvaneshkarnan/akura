@@ -1,12 +1,12 @@
 # AKRURA DE ADDICTION & REHABILITATION CENTRE
 
-Official responsive, modern website for **Akrura De Addiction & Rehabilitation Centre** (Vadipatti, Madurai, Tamil Nadu), built using high-end modern healthcare design aesthetics inspired by Maven Clinic.
+Official responsive, modern, production-ready website for **Akrura De Addiction & Rehabilitation Centre** (Vadipatti, Madurai, Tamil Nadu).
 
 ---
 
 ## 🌟 About The Centre
 
-> **Akrura De Addiction & Rehabilitation Centre** is a trusted centre for Alcohol, Drug De-addiction and Psychiatric Care. Located at Vadipatti, Madurai, we serve patients from All Over Tamil Nadu including Chennai, Erode, Salem, Tiruppur, Coimbatore, Madurai, and Dindigul. Our treatment includes Medical Support, Counseling, Yoga, Meditation and Mind Refreshment activities. We help every person to recover with dignity and rejoin their family.
+> **Akrura De Addiction & Rehabilitation Centre** is a trusted sanctuary for Alcohol, Drug De-addiction and Psychiatric Care. Located at Vadipatti, Madurai, we serve patients from all over Tamil Nadu including Chennai, Erode, Salem, Tiruppur, Coimbatore, Madurai, and Dindigul. Our treatment includes 24/7 Medical Support, Counseling, Yoga, Meditation, and Mind Refreshment activities. We help every person to recover with dignity and rejoin their family.
 
 - **24/7 Emergency & Admission Helpline:** [+91 93841 90971](tel:9384190971) / [WhatsApp](https://wa.me/919384190971)
 - **Facility Address:** 5/96/13, Street-3, Mettuperumal Nagar, Vadipatti, Madurai - 625218, Tamil Nadu (Near Madurai - Dindigul Main Road)
@@ -15,78 +15,63 @@ Official responsive, modern website for **Akrura De Addiction & Rehabilitation C
 
 ---
 
-## 🏥 8 Comprehensive Clinical & Holistic Services
+## 🚀 Pages & Structure
 
-1. **Alcohol De-Addiction Treatment**
-   - Safe, medically managed withdrawal, clinical monitoring, and anti-craving protocols.
-2. **Drug De-Addiction Treatment**
-   - Evidence-based recovery protocols for prescription drugs, opioids, cannabis, and chemical substances.
-3. **Psychiatric Care & Counseling**
-   - Diagnosis, psychiatric stabilization, and specialized dual-diagnosis therapy for co-occurring mental conditions.
-4. **Detoxification & Medical Support**
-   - 24/7 doctor supervision, intensive medical monitoring, and personalized clinical tapering routines.
-5. **Individual Counseling**
-   - One-on-one psychological counseling, cognitive behavioral therapy (CBT), and trauma-informed healing.
-6. **Family Counseling**
-   - Healing family relationships, educational workshops, co-dependency guidance, and home support networks.
-7. **Yoga, Meditation, Exercise, Brain Gym & Holistic Activities**
-   - Mind-body rejuvenation, daily meditation, neuro-plasticity brain gym exercises, and recreational games.
-8. **Aftercare & Rehabilitation Support**
-   - Long-term relapse prevention programs, peer support meetings, life skills training, and reintegration.
+1. **[index.html](index.html)**: Comprehensive Home page featuring emergency hero, clinical focus switcher, 8 clinical treatments, authentic sanctuary campus preview, patient stories, and interactive consultation form.
+2. **[about.html](about.html)**: Dedicated About Us page detailing clinical philosophy, medical team leadership, recovery methodology, and family reunification mission.
+3. **[services.html](services.html)**: Complete Treatments page covering Alcohol De-Addiction, Drug Rehabilitation, 24/7 Medical Detox, Psychiatric Care, Individual CBT, Family Therapy, Yoga/Brain Gym, and Relapse Prevention Aftercare.
+4. **[facilities.html](facilities.html)**: Vadipatti Campus & Sanctuary tour showcasing inpatient residential suites, 24/7 nursing clinic, meditation hall, dining facilities, and quiet recovery grounds.
+5. **[contact.html](contact.html)**: Contact & 24/7 Admissions page with driving directions, Google Maps location, emergency ambulance escort details, and admission intake form.
 
 ---
 
-## 🚀 Key Website Features & Interactive Modules
+## 🎨 Design & Technical Highlights
 
-1. **Emergency & Quick Contact Header Bar:**
-   - 24/7 Helpline (+91 93841 90971), WhatsApp emergency chat button, and Tamil Nadu service coverage badge.
-2. **Interactive Navigation & Mega Menu:**
-   - Desktop and mobile responsive navigation with quick access to About, All 8 Services, Facility Tour, Why Us, Service Areas, and Contact.
-3. **Hero Section:**
-   - Compassionate, dignity-first messaging: *"Recover With Dignity. Rejoin Your Family."*
-   - Interactive recovery focus switcher ("Alcohol De-Addiction", "Drug Rehabilitation", "Psychiatric Care", "Family Healing").
-   - Dual Call-to-Actions: "Call Helpline: 93841 90971" and "Confidential Consultation".
-4. **Interactive Bento Grid:**
-   - 24/7 Inpatient Medical Supervision.
-   - 100% Confidentiality Guarantee.
-   - Comprehensive All-Tamil-Nadu Reach (Chennai, Erode, Salem, Tiruppur, Coimbatore, Madurai, Dindigul).
-   - Multi-Disciplinary Team (Psychiatrists, Doctors, Counselors, Yoga Gurus, Social Workers).
-5. **Clinical Recovery Metrics & Proof Points:**
-   - Animated GSAP ScrollTrigger statistics displaying verified recovery rates, family reunification, round-the-clock medical attention, and sustained sobriety.
-6. **Facility & Campus Tour Section:**
-   - Clean gallery cards for Peaceful Vadipatti Campus, Private Counseling Rooms, Yoga & Meditation Hall, and Dining & Recreation.
-   - Badged with *"Official Facility Photo Updating Soon"* for seamless replacement with official photographs.
-7. **Embedded Interactive Google Maps:**
-   - Responsive iframe pointing directly to Vadipatti, Madurai (Madurai - Dindigul Main Road corridor).
-8. **Confidential Consultation Callback Form:**
-   - Interactive submission with instant client-side confirmation feedback without external third-party tracking dependencies.
-9. **Floating Quick-Action Buttons:**
-   - One-tap Direct Call and WhatsApp floating widgets on mobile and desktop.
+- **Clean Minimal UI**: Zero box shadows (`box-shadow: none !important`), crisp hairline borders, and pure clinical aesthetics.
+- **Official Brand Logo**: High-resolution official head profile emblem & typography (`logo.png` for light navbar, `logo-white.png` for dark navy footer).
+- **Shopify Polaris SVG Icons**: Lightweight, ultra-crisp vector icons throughout all cards and buttons.
+- **Authentic Clinic Imagery**: 14 high-resolution, web-optimized photographs depicting the actual Vadipatti clinic campus, doctors, patient counseling, and medical consultations.
+- **100% Mobile Optimized**: Touch-friendly floating WhatsApp & call buttons, responsive mobile navigation drawer, fluid typography, and zero horizontal overflow.
+- **SEO & PWA Ready**: JSON-LD Structured Data (`MedicalOrganization`), OpenGraph / Twitter Cards, XML Sitemap (`sitemap.xml`), `robots.txt`, and Web App Manifest (`site.webmanifest`).
 
 ---
 
-## 💻 How to Run Locally
+## 📁 Production Directory Structure
 
-### Option 1: Python Web Server (Recommended)
-```bash
-python -m http.server 8080
-```
-Open [http://localhost:8080/index.html](http://localhost:8080/index.html) in any browser.
-
-### Option 2: Node / npx
-```bash
-npx serve -p 8080 .
+```text
+akura/
+├── index.html                     # Home page
+├── about.html                     # About Us page
+├── services.html                  # Treatments & Services page
+├── facilities.html                # Vadipatti Campus page
+├── contact.html                   # Contact & Admissions page
+├── styles.css                     # Production CSS stylesheet
+├── logo.png                       # Official transparent logo (navbar)
+├── logo-white.png                 # Official white logo (footer)
+├── favicon.png                    # Brand favicon (32x32)
+├── apple-touch-icon.png           # iOS home screen icon (180x180)
+├── favicon-192.png                # Android PWA icon (192x192)
+├── favicon-512.png                # High-res PWA icon (512x512)
+├── site.webmanifest               # Web application manifest
+├── robots.txt                     # Search engine crawler instructions
+├── sitemap.xml                    # Production XML sitemap
+├── clinic-*.jpg                   # 14 authentic clinic & facility photos
+└── README.md                      # Project documentation
 ```
 
-### Option 3: Direct File Opening
-Double-click `index.html` in your file explorer to open it in Chrome, Edge, Safari, or Firefox.
-
 ---
 
-## 📁 Key File Structure
-- `index.html`: Fully styled, production-ready website for Akrura De Addiction & Rehabilitation Centre.
-- `build_akrura_site.py`: Generator script to recompile or update content, services, and contacts.
-- `akrura-logo.svg` & `akrura-logo-white.svg`: Customized vector logos featuring the recovery lotus and cross emblem.
-- `shared.min.css` & `page.min.css`: High-fidelity healthcare design tokens, typography, and responsive layouts.
-- `service-*.jpg`, `facility-*.jpg`, `hero-bg-*.jpg`: Curated high-resolution imagery.
-- `jquery.min.js`, `gsap.min.js`, `ScrollTrigger.min.js`, `swiper-bundle.min.js`, `rive.min.js`: Local vendor scripts.
+## 🌐 Deploying to Production ("Going Live")
+
+### GitHub Pages (Instant Free Hosting)
+1. Push this repository to GitHub.
+2. Go to **Settings** > **Pages**.
+3. Under **Branch**, select `main` and root `/`, then click **Save**.
+4. The website will be live in 60 seconds at `https://<username>.github.io/<repo-name>/`.
+
+### Netlify / Vercel
+- Drag and drop this folder directly into the Netlify dashboard, or connect the GitHub repository. Build command: None (Static HTML), Publish directory: `.`
+
+### cPanel / Apache / Nginx / Hostinger
+- Upload all files from this directory to `public_html` via FTP or File Manager.
+- Ensure `robots.txt`, `sitemap.xml`, and `site.webmanifest` are in the document root.
