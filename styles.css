@@ -1728,8 +1728,10 @@ button:hover,
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .team-card {
@@ -1759,6 +1761,7 @@ button:hover,
   border-radius: 50%;
   background: var(--blue-soft);
   color: var(--blue-primary);
+  border: 1.5px solid rgba(0, 102, 204, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
