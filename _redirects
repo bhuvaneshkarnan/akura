@@ -1,0 +1,6 @@
+# ----------------------------------------------------------------------
+# Netlify & Cloudflare Pages Redirects
+# 301 Permanent Redirect: /index.html -> /
+# ----------------------------------------------------------------------
+/index.html    /    301!
+https://akruradindigul.in/*    https://www.akruradindigul.in/:splat    301!

@@ -33,6 +33,8 @@ Official responsive, modern, production-ready website for **Akrura De Addiction 
 - **Authentic Clinic Imagery**: 14 high-resolution, web-optimized photographs depicting the actual Vadipatti clinic campus, doctors, patient counseling, and medical consultations.
 - **100% Mobile Optimized**: Touch-friendly floating WhatsApp & call buttons, responsive mobile navigation drawer, fluid typography, and zero horizontal overflow.
 - **SEO & PWA Ready**: JSON-LD Structured Data (`MedicalOrganization`), OpenGraph / Twitter Cards, XML Sitemap (`sitemap.xml`), `robots.txt`, and Web App Manifest (`site.webmanifest`).
+- **Official Domain**: Canonicalized to `https://www.akruradindigul.in/`.
+- **Permanent 301 Redirect**: Fully configured to permanently redirect `https://www.akruradindigul.in/index.html` to `https://www.akruradindigul.in/` across all platforms (Apache, Nginx, Netlify, Cloudflare Pages, Vercel, and client-side fallback).
 
 ---
 
@@ -40,12 +42,16 @@ Official responsive, modern, production-ready website for **Akrura De Addiction 
 
 ```text
 akura/
-├── index.html                     # Home page
+├── index.html                     # Home page (with client-side fallback redirect)
 ├── about.html                     # About Us page
 ├── services.html                  # Treatments & Services page
 ├── facilities.html                # Vadipatti Campus page
 ├── contact.html                   # Contact & Admissions page
 ├── styles.css                     # Production CSS stylesheet
+├── .htaccess                      # Apache / LiteSpeed server rules (301 redirect, HTTPS, non-www -> www)
+├── _redirects                     # Netlify & Cloudflare Pages 301 permanent redirect rules
+├── netlify.toml                   # Netlify configuration file
+├── vercel.json                    # Vercel permanent redirect configuration
 ├── logo.png                       # Official transparent logo (navbar)
 ├── logo-white.png                 # Official white logo (footer)
 ├── favicon.png                    # Brand favicon (32x32)
@@ -54,24 +60,112 @@ akura/
 ├── favicon-512.png                # High-res PWA icon (512x512)
 ├── site.webmanifest               # Web application manifest
 ├── robots.txt                     # Search engine crawler instructions
-├── sitemap.xml                    # Production XML sitemap
+├── sitemap.xml                    # Production XML sitemap (canonical URLs)
 ├── clinic-*.jpg                   # 14 authentic clinic & facility photos
 └── README.md                      # Project documentation
 ```
 
 ---
 
+## 🔄 Permanent 301 Redirect Configuration (`/index.html` → `/`)
+
+The official domain is `https://www.akruradindigul.in/`. To prevent duplicate content penalties, consolidate Google ranking signals, and ensure clean URLs, all traffic to `/index.html` is permanently 301 redirected to `/`.
+
+### 1. Apache / LiteSpeed / cPanel / Hostinger (`.htaccess`)
+Pre-configured in [`.htaccess`](.htaccess) using `%{THE_REQUEST}` to prevent infinite directory index loops:
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 301 Permanent Redirect: /index.html -> /
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html[?\s] [NC]
+  RewriteRule ^index\.html$ https://www.akruradindigul.in/ [R=301,L]
+
+  # non-www to www redirect
+  RewriteCond %{HTTP_HOST} ^akruradindigul\.in$ [NC]
+  RewriteRule ^(.*)$ https://www.akruradindigul.in/$1 [R=301,L]
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://www.akruradindigul.in/$1 [R=301,L]
+</IfModule>
+```
+
+### 2. Nginx Configuration
+If hosting on Nginx (Ubuntu/Debian VPS or AWS EC2), add the following inside your `server { ... }` block:
+```nginx
+server {
+    server_name akruradindigul.in;
+    return 301 https://www.akruradindigul.in$request_uri;
+}
+
+server {
+    server_name www.akruradindigul.in;
+
+    # 301 Permanent Redirect for index.html
+    if ($request_uri ~ ^/index\.html($|\?)) {
+        return 301 https://www.akruradindigul.in/;
+    }
+
+    root /var/www/akura;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+### 3. Netlify & Cloudflare Pages (`_redirects` & `netlify.toml`)
+Pre-configured in [`_redirects`](_redirects) and [`netlify.toml`](netlify.toml):
+```text
+/index.html    /    301!
+https://akruradindigul.in/*    https://www.akruradindigul.in/:splat    301!
+```
+
+### 4. Vercel (`vercel.json`)
+Pre-configured in [`vercel.json`](vercel.json):
+```json
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
+```
+
+### 5. Client-Side Fallback (`index.html`)
+For environments where server-level rewrite rules cannot be set, a zero-latency script in `<head>` ensures immediate browser URL correction:
+```html
+<script>
+  if (window.location.pathname.endsWith('/index.html')) {
+    var cleanPath = window.location.pathname.replace(/\/index\.html$/, '/') || '/';
+    window.location.replace(window.location.origin + cleanPath + window.location.search + window.location.hash);
+  }
+</script>
+```
+
+---
+
 ## 🌐 Deploying to Production ("Going Live")
 
-### GitHub Pages (Instant Free Hosting)
+### Hostinger / cPanel / Apache / LiteSpeed
+1. Upload all files from this directory directly to your `public_html` root folder via FTP or File Manager.
+2. Confirm `.htaccess` (hidden dot file) is uploaded to the root.
+3. Test visiting `https://www.akruradindigul.in/index.html` — it will immediately 301 redirect to `https://www.akruradindigul.in/`.
+
+### Netlify / Vercel
+- Drag and drop this folder directly into the Netlify dashboard, or connect the GitHub repository.
+- Build command: *None* (Static HTML), Publish directory: `.`
+- All redirect rules in `_redirects` / `vercel.json` are applied automatically.
+
+### GitHub Pages
 1. Push this repository to GitHub.
 2. Go to **Settings** > **Pages**.
 3. Under **Branch**, select `main` and root `/`, then click **Save**.
-4. The website will be live in 60 seconds at `https://<username>.github.io/<repo-name>/`.
-
-### Netlify / Vercel
-- Drag and drop this folder directly into the Netlify dashboard, or connect the GitHub repository. Build command: None (Static HTML), Publish directory: `.`
-
-### cPanel / Apache / Nginx / Hostinger
-- Upload all files from this directory to `public_html` via FTP or File Manager.
-- Ensure `robots.txt`, `sitemap.xml`, and `site.webmanifest` are in the document root.
+4. Set custom domain to `www.akruradindigul.in` and enforce HTTPS.

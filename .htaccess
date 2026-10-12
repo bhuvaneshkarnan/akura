@@ -1,0 +1,29 @@
+# ----------------------------------------------------------------------
+# Akrura De Addiction & Rehabilitation Centre - Production .htaccess
+# Target Domain: https://www.akruradindigul.in/
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Permanent 301 Redirect: /index.html -> /
+  # Uses %{THE_REQUEST} to detect direct requests and prevent internal DirectoryIndex loops
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html[?\s] [NC]
+  RewriteRule ^index\.html$ https://www.akruradindigul.in/ [R=301,L]
+
+  # 2. Permanent 301 Redirect: non-www to www (akruradindigul.in -> www.akruradindigul.in)
+  RewriteCond %{HTTP_HOST} ^akruradindigul\.in$ [NC]
+  RewriteRule ^(.*)$ https://www.akruradindigul.in/$1 [R=301,L]
+
+  # 3. Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://www.akruradindigul.in/$1 [R=301,L]
+</IfModule>
+
+# Prevent directory indexing
+Options -Indexes
+
+# Set default index document
+DirectoryIndex index.html
